@@ -19,12 +19,12 @@ public class PlayerMovment : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForceY (Jump);
+            rb.AddForceY(Jump);
         }
 
         // changes movment vector and wether sprite should be flipped depending on what key is pressed
         if (Input.GetKey(KeyCode.D))
-       {
+        {
             movmentVector = new Vector2(1,0);
             sprite.flipX = false;
         }
@@ -43,7 +43,7 @@ public class PlayerMovment : MonoBehaviour
     private void FixedUpdate()
     {
 
-        // applies movmnet vector to players rb 
-        rb.linearVelocity = new Vector2(movmentVector.x * Speed,rb.linearVelocity.y);
+        // applies movmnet vector and force applied to y to players rb 
+        rb.linearVelocity = new Vector2(movmentVector.x * Speed, rb.linearVelocity.y);
     }
 }
