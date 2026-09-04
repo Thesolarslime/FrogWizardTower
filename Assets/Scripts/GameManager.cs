@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject BackGround;
 
     public float BackgroundSpawnTimer = 0;
+    
     private void Awake()
     {
         // if there is a version of this which isnt this, delete this 
