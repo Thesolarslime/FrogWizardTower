@@ -106,7 +106,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -1005,7 +1005,7 @@ ParticleSystem:
           outWeight: 0.16303788
         - serializedVersion: 3
           time: 1
-          value: 0.06604004
+          value: 0.179245
           inSlope: -0.06794285
           outSlope: -0.06794285
           tangentMode: 0
