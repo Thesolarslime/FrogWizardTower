@@ -9,7 +9,7 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float Speed = 1.0f;
     [SerializeField] float Jump = 10.0f;
     [SerializeField] float RotationSpd = 30;
-    [SerializeField] float HowOftenSelfRight = 4;
+  //  [SerializeField] float HowOftenSelfRight = 4;
 
     Vector2 movmentVector;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -51,38 +51,17 @@ public class PlayerMovment : MonoBehaviour
         // applies movmnet vector and force applied to y to players rb.linearVelocity
         // we use .LinearVelocity rather then .MovePosition because it takes account for the forces already
         //being applied to the object
-        
         rb.linearVelocity = new Vector2(movmentVector.x * Speed, rb.linearVelocity.y);
 
 
-        // self rights player character periodicly, BUG how often self right var dosnt seem to work as expected
-        ElapsedTime += Time.deltaTime;
-
-        if (ElapsedTime > HowOftenSelfRight)
+        if (transform.rotation.z != transform.up.z + 20  || transform.rotation.z != transform.up.z - 20)
         {
-            print("here");
-            StartCoroutine(LerpRotation(0));
-            ElapsedTime = 0;
-        }
-
-    }
-    IEnumerator LerpRotation(float TargetDegree)
-    {
-
-        Quaternion startValue = transform.rotation;
-
-        while (transform.rotation.z != TargetDegree || transform.rotation.z > 1 || transform.rotation.z < -1)
-        {
-
-            float TragetAngle = Mathf.MoveTowardsAngle(rb.rotation, TargetDegree, RotationSpd * Time.fixedDeltaTime);
+           // print("hjshd");
+            float TragetAngle = Mathf.MoveTowardsAngle(rb.rotation, 0, RotationSpd * Time.fixedDeltaTime);
 
             rb.MoveRotation(TragetAngle);
-            
-            yield return null;
         }
-       // ElapsedTime = 0;
-        // sets rotation velocity back to nothing after finished rotating
-        
-
+      
     }
+   
 }
