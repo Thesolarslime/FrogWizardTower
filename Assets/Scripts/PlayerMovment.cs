@@ -13,6 +13,8 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float Stamina_Depleation = 0.1f;
     [SerializeField] float Stamina_Recovery = 0.1f;
     float Max_stamina;
+
+    private Animator WizardAnimator;
     //  [SerializeField] float HowOftenSelfRight = 4;
 
     Vector2 movmentVector;
@@ -20,6 +22,7 @@ public class PlayerMovment : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        WizardAnimator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         Max_stamina = Stamina;
     }
@@ -47,16 +50,36 @@ public class PlayerMovment : MonoBehaviour
         {
             movmentVector = new Vector2(1,0);
             sprite.flipX = false;
+            WizardAnimator.SetBool("Running", true);
         }
        else if (Input.GetKey(KeyCode.A))
        {
             movmentVector = new Vector2(-1, 0);
             sprite.flipX = true;
-       }
+            WizardAnimator.SetBool("Running", true);
+        }
        else
        {
             movmentVector = new Vector2(0,0);
-       }
+            WizardAnimator.SetBool("Running", false);
+        }
+
+        // vertical velocity checks that determine sprite animation based on if the player is going up or down
+        if (rb.linearVelocityY < -0.1f)
+        {
+            WizardAnimator.SetBool("Falling", true);
+            WizardAnimator.SetBool("Rising", false);
+        }
+        else if (rb.linearVelocityY > 0.1f)
+        {
+            WizardAnimator.SetBool("Falling", false);
+            WizardAnimator.SetBool("Rising", true);
+        }
+        else
+        {
+            WizardAnimator.SetBool("Falling", false);
+            WizardAnimator.SetBool("Rising", false);
+        }
             
     }
 

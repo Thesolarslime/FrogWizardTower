@@ -13,6 +13,10 @@ PrefabInstance:
       value: TowerTile
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 0a5128aed6ec9b443b0eb2592a8d589f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8762860393067785327, guid: 634d0beffeaf4504991e7e5d82a68767, type: 3}
+    - target: {fileID: 3626916397498700004, guid: 0a5128aed6ec9b443b0eb2592a8d589f, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -129,7 +133,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.1, y: 0.1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
