@@ -8,7 +8,7 @@ public class PanThingToLeft : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PanSpeed = -0.01f;
+        PanSpeed = -0.002f;
         DestroySelfTime = 50f;
     }
 

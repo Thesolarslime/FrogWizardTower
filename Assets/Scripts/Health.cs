@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Health
+public class Health : MonoBehaviour
 {
     public int HP;
     public int MaxHP;
@@ -13,6 +13,7 @@ public class Health
 
 
     public SpriteRenderer Sprite;
+    public BoxCollider2D Collider;
     public ParticleSystem DeathParticle;
     public ParticleSystem HurtParticle;
 
@@ -22,24 +23,30 @@ public class Health
         HP -= Damage;
         if (HP < 1)
         {
-            Die();
+            StartCoroutine(Die());
         }
         else
         {
-            
+            StartCoroutine(RedPulse());
+            HurtParticle.Play();
         }
     }
 
-    public void Die()
+    public IEnumerator Die()
     {
-
+        yield return new WaitForEndOfFrame();
+        if (Type == "Tower")
+        {
+            Collider.enabled = false;
+            Sprite.enabled = false;
+            DeathParticle.Play();
+        }
     }
 
     private IEnumerator RedPulse()
     {
         Sprite.color = Color.red;
-        yield return null;
-        //yield return WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.1f);
         Sprite.color = Color.white;
     }
 }
