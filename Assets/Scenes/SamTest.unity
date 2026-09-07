@@ -483,9 +483,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  Jump: 200
+  Jump: 20
   RotationSpd: 300
-  HowOftenSelfRight: 0.5
+  Stamina: 100
+  Stamina_Depleation: 100
+  Stamina_Recovery: 20
 --- !u!70 &554342744
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

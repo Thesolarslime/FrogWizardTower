@@ -9,7 +9,11 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float Speed = 1.0f;
     [SerializeField] float Jump = 10.0f;
     [SerializeField] float RotationSpd = 30;
-  //  [SerializeField] float HowOftenSelfRight = 4;
+    [SerializeField] float Stamina = 100;
+    [SerializeField] float Stamina_Depleation = 0.1f;
+    [SerializeField] float Stamina_Recovery = 0.1f;
+    float Max_stamina;
+    //  [SerializeField] float HowOftenSelfRight = 4;
 
     Vector2 movmentVector;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,14 +21,25 @@ public class PlayerMovment : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        Max_stamina = Stamina;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && Stamina > 10)
         {
-            rb.AddForceY(Jump);
+           rb.AddForceY(Jump);
+           Stamina -= Stamina_Depleation * Time.deltaTime;
+            // sets stamina to 0 if stamina enters negatives 
+           if (Stamina < 0) { Stamina = 0; }
+
+           print(Stamina);
+        }
+        else
+        {
+            Stamina += Stamina_Recovery * Time.deltaTime;
+            if (Stamina > Max_stamina) { Stamina = Max_stamina;}
         }
 
         // changes movment vector and wether sprite should be flipped depending on what key is pressed
@@ -44,6 +59,7 @@ public class PlayerMovment : MonoBehaviour
        }
             
     }
+
 
     private void FixedUpdate()
     {
