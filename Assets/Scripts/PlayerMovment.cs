@@ -10,7 +10,7 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float Jump = 10.0f;
     [SerializeField] float RotationSpd = 30;
     [SerializeField] float FloatSpd = 4;
-    [SerializeField] float Stamina = 100;
+    public float Stamina = 100;
     [SerializeField] float Stamina_Depleation = 0.1f;
     [SerializeField] float Stamina_Recovery = 0.1f;
     float Max_stamina;
@@ -75,13 +75,13 @@ public class PlayerMovment : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space) && Stamina > 10)
+        if (Input.GetKey(KeyCode.Space) && Stamina > 0)
         {
             rb.AddForceY(Jump);
             if (rb.linearVelocityY > FloatSpd) { rb.linearVelocityY = FloatSpd; }
             Stamina -= Stamina_Depleation * Time.deltaTime;
             // sets stamina to 0 if stamina enters negatives 
-            if (Stamina < 0) { Stamina = 0; }
+            if (Stamina < 0) { Stamina = 0; rb.AddForceY(-Jump); }
 
             print(Stamina);
         }
