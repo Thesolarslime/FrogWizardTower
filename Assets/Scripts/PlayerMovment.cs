@@ -9,12 +9,14 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float Speed = 1.0f;
     [SerializeField] float Jump = 10.0f;
     [SerializeField] float RotationSpd = 30;
-    [SerializeField] float Stamina = 100;
+    [SerializeField] float FloatSpd = 4;
+    public float Stamina = 100;
     [SerializeField] float Stamina_Depleation = 0.1f;
     [SerializeField] float Stamina_Recovery = 0.1f;
     float Max_stamina;
 
     private Animator WizardAnimator;
+    [SerializeField] ParticleSystem FloatParticle;
     //  [SerializeField] float HowOftenSelfRight = 4;
 
     Vector2 movmentVector;
@@ -30,20 +32,6 @@ public class PlayerMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && Stamina > 10)
-        {
-           rb.AddForceY(Jump);
-           Stamina -= Stamina_Depleation * Time.deltaTime;
-            // sets stamina to 0 if stamina enters negatives 
-           if (Stamina < 0) { Stamina = 0; }
-
-           print(Stamina);
-        }
-        else
-        {
-            Stamina += Stamina_Recovery * Time.deltaTime;
-            if (Stamina > Max_stamina) { Stamina = Max_stamina;}
-        }
 
         // changes movment vector and wether sprite should be flipped depending on what key is pressed
         if (Input.GetKey(KeyCode.D))
@@ -74,6 +62,7 @@ public class PlayerMovment : MonoBehaviour
         {
             WizardAnimator.SetBool("Falling", false);
             WizardAnimator.SetBool("Rising", true);
+            if (Random.Range(0, 31) == 3)FloatParticle.Emit(1);
         }
         else
         {
@@ -86,6 +75,21 @@ public class PlayerMovment : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.Space) && Stamina > 0)
+        {
+            rb.AddForceY(Jump);
+            if (rb.linearVelocityY > FloatSpd) { rb.linearVelocityY = FloatSpd; }
+            Stamina -= Stamina_Depleation * Time.deltaTime;
+            // sets stamina to 0 if stamina enters negatives 
+            if (Stamina < 0) { Stamina = 0; rb.AddForceY(-Jump); }
+
+            print(Stamina);
+        }
+        else
+        {
+            Stamina += Stamina_Recovery * Time.deltaTime;
+            if (Stamina > Max_stamina) { Stamina = Max_stamina; }
+        }
 
         // applies movmnet vector and force applied to y to players rb.linearVelocity
         // we use .LinearVelocity rather then .MovePosition because it takes account for the forces already
