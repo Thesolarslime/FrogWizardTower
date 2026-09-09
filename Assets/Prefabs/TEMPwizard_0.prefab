@@ -132,9 +132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  Jump: 2
+  Jump: 80
   RotationSpd: 300
-  Stamina: 100
+  FloatSpd: 5
+  Stamina: 80
   Stamina_Depleation: 100
   Stamina_Recovery: 20
 --- !u!70 &8690536145056580184
