@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     private float GameTimer = 0;
     private int GameTimerInt = 0;
+    private float ElapsedTimeForLevel = 0;
+    public float LevelUpTime = 30;
     
 
     private void Awake()
@@ -48,13 +50,20 @@ public class GameManager : MonoBehaviour
        return SpawnTime = Random.Range(LowerSpawnRange, HigerSpawnRange);
     }
 
+    public void LevelUp()
+    {
+        print("levelUp");
+    }
+
     private void LevelUpSystem()
     {
-        
-        GameTimer += Time.deltaTime;
+        ElapsedTimeForLevel += Time.deltaTime;
 
-        GameTimerInt = Mathf.RoundToInt(GameTimer);
-        TimerText.text = GameTimerInt.ToString();
+        if(ElapsedTimeForLevel >= LevelUpTime)
+        {
+            LevelUp();
+            ElapsedTimeForLevel = 0;
+        }
     }
 
     private void CloudSpawning()
@@ -71,6 +80,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameTimer += Time.deltaTime;
+
+        GameTimerInt = Mathf.RoundToInt(GameTimer);
+        TimerText.text = GameTimerInt.ToString();
+
         LevelUpSystem();
         
         CloudSpawning();
