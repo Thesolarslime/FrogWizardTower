@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Health : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Health : MonoBehaviour
 
 
     public SpriteRenderer Sprite;
+    public ShadowCaster2D Shadow;
     public BoxCollider2D Collider;
     public ParticleSystem DeathParticle;
     public ParticleSystem HurtParticle;
@@ -39,6 +41,7 @@ public class Health : MonoBehaviour
         {
             Collider.enabled = false;
             Sprite.enabled = false;
+            Shadow.enabled = false;
             DeathParticle.Play();
         }
         if (Type == "Enemy")

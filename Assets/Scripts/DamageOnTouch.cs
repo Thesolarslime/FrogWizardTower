@@ -4,6 +4,7 @@ using UnityEngine;
 public class DamageOnTouch : MonoBehaviour
 {
     public int TouchDamage = 1;
+    public AudioPlayer Audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,5 +23,6 @@ public class DamageOnTouch : MonoBehaviour
         {
             collision.gameObject.GetComponent<Health>().Damage(TouchDamage);
         }
+        Audio.PlaySound(0, 0.5f, true);
     }
 }
