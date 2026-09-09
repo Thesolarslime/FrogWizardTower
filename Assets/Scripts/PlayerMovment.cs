@@ -83,7 +83,7 @@ public class PlayerMovment : MonoBehaviour
             // sets stamina to 0 if stamina enters negatives 
             if (Stamina < 0) { Stamina = 0; rb.AddForceY(-Jump); }
 
-            print(Stamina);
+            //print(Stamina);
         }
         else
         {
