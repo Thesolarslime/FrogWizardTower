@@ -31,7 +31,7 @@ public class EnemySpawner : MonoBehaviour
 
             randomPosition.y = transform.position.y + RandomYSpawnLoaction;
 
-            Instantiate(Enemys[0],randomPosition,Quaternion.identity);
+            Instantiate(Enemys[Random.Range(0,Enemys.Count)],randomPosition,Quaternion.identity);
             spwan_timer = GameManager.instance.SpawnTimeRandomiser();
             ElapsedTime = 0f;
         } 

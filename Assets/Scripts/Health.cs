@@ -48,7 +48,9 @@ public class Health : MonoBehaviour
         {
             Collider.enabled = false;
             Sprite.enabled = false;
+            Collider.gameObject.GetComponent<Rigidbody2D>().simulated = false;
             DeathParticle.Play();
+            StartCoroutine(EnemyDie());
         }
     }
 
@@ -57,5 +59,11 @@ public class Health : MonoBehaviour
         Sprite.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         Sprite.color = Color.white;
+    }
+
+    private IEnumerator EnemyDie()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 }
