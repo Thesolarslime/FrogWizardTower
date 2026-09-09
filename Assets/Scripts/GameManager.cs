@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] GameObject BackGround;
     [SerializeField] GameObject Player;
+    [SerializeField] GameObject LevelUpParicle;
     public float HigerSpawnRange = 10f;
     public float LowerSpawnRange = 5f;
 
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
     public void LevelUp()
     {
         print("levelUp");
+        Instantiate(LevelUpParicle, Player.transform.position, Quaternion.identity);
     }
 
     private void LevelUpSystem()
