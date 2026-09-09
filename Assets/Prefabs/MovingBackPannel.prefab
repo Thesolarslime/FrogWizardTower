@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanSpeed: -0.005
+  DestroySelfTime: 100
 --- !u!1 &2816081874543629156
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,9 +5,13 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
     
     [SerializeField] GameObject BackGround;
+    [SerializeField] GameObject Player;
+    public float HigerSpawnRange = 10f;
+    public float LowerSpawnRange = 5f;
 
     public float BackgroundSpawnTimer = 0;
     
+
     private void Awake()
     {
         // if there is a version of this which isnt this, delete this 
@@ -30,6 +34,12 @@ public class GameManager : MonoBehaviour
         RandomSpawn = Random.Range(50, 70);
 
         BackGroundSpawnLocation = new Vector3(RandomSpawn, 6.4f, 0);
+    }
+
+    public float SpawnTimeRandomiser()
+    {
+        float SpawnTime;
+       return SpawnTime = Random.Range(LowerSpawnRange, HigerSpawnRange);
     }
 
     // Update is called once per frame

@@ -13,7 +13,7 @@ public class MoveTowrdsPlayer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Player = GameObject.Find("TEMPwizard_0");
+        Player = GameObject.Find("TEMPwizard_0 (1)");
         RB = GetComponent<Rigidbody2D>();
     }
 
