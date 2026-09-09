@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class MoveTowrdsPlayer : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    GameObject Player;
+    public GameObject Player;
     Rigidbody2D RB;
     [SerializeField] float Speed = 4;
     [SerializeField] float RotationSpd = 2;
@@ -31,13 +31,35 @@ public class MoveTowrdsPlayer : MonoBehaviour
 
         Vector2 MoveToVector = Vector2.MoveTowards(RB.position, playerLocation, Speed * Time.fixedDeltaTime);
 
-        RB.MovePosition(MoveToVector);
+        Vector2 ToPlayer = playerLocation - RB.position;
+
+        //Debug.Log(MoveToVector + " " + playerLocation);
+
+        //RB.MovePosition(MoveToVector);
+        RB.AddForce(ToPlayer);
+
+        if (RB.linearVelocityX > 5)
+        {
+            RB.linearVelocityX = 5;
+        }
+        if (RB.linearVelocityX < -5)
+        {
+            RB.linearVelocityX = -5;
+        }
+        if (RB.linearVelocityY > 5)
+        {
+            RB.linearVelocityY = 5;
+        }
+        if (RB.linearVelocityY < -5)
+        {
+            RB.linearVelocityY = -5;
+        }
 
         ElapsedTime += Time.deltaTime;
 
         if (ElapsedTime > 4)
         {
-            StartCoroutine(LerpRotation(0));
+            //StartCoroutine(LerpRotation(0));
             ElapsedTime = 0;
         }
 
