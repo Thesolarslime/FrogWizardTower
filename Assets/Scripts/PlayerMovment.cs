@@ -16,6 +16,7 @@ public class PlayerMovment : MonoBehaviour
     float Max_stamina;
 
     private Animator WizardAnimator;
+    [SerializeField] ParticleSystem FloatParticle;
     //  [SerializeField] float HowOftenSelfRight = 4;
 
     Vector2 movmentVector;
@@ -61,6 +62,7 @@ public class PlayerMovment : MonoBehaviour
         {
             WizardAnimator.SetBool("Falling", false);
             WizardAnimator.SetBool("Rising", true);
+            if (Random.Range(0, 31) == 3)FloatParticle.Emit(1);
         }
         else
         {

@@ -3087,6 +3087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TEMPwizard_0
       objectReference: {fileID: 0}
+    - target: {fileID: 2826575798727134818, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
+      propertyPath: Stamina_Depleation
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3821598984914656368, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.74
