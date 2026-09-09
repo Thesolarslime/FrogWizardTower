@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f4cff88308f22f041812df52fb999e34
+guid: a65f401afbbfd6e4780f54031ba5259a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,9 +123,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: PartyPopper 1
+  - name: SplashArt
     originalName: 
-    pivot: {x: 0.5, y: -0.5}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,9 +133,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 7
-      height: 10
-    spriteID: 0606d266036fb6240b595202a2abb6b4
+      width: 144
+      height: 96
+    spriteID: a2220f6a0b536534f9eaea402c60c1f8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,25 +148,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 2894579243
+      value0: 1814515778
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: PartyPopper 1
+    name: SplashArt
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: PartyPopper 1
+    - name: SplashArt
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 1
+        x: 0
         y: 0
-        width: 7
-        height: 10
-      spriteId: 0606d266036fb6240b595202a2abb6b4
+        width: 144
+        height: 96
+      spriteId: a2220f6a0b536534f9eaea402c60c1f8
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -185,5 +185,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 9, y: 10}
-  previousTextureSize: {x: 16, y: 32}
+  canvasSize: {x: 144, y: 96}
+  previousTextureSize: {x: 256, y: 128}

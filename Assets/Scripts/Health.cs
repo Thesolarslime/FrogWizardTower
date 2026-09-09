@@ -41,6 +41,12 @@ public class Health : MonoBehaviour
             Sprite.enabled = false;
             DeathParticle.Play();
         }
+        if (Type == "Enemy")
+        {
+            Collider.enabled = false;
+            Sprite.enabled = false;
+            DeathParticle.Play();
+        }
     }
 
     private IEnumerator RedPulse()
