@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 
     private float spwan_timer;
     public List<GameObject> Enemys = new List<GameObject>();
+    Vector2 randomPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
     }
 
     float ElapsedTime = 0f;
+    private float RandomYSpawnLoaction;
+    private float RandomXSpawnLocation;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +24,14 @@ public class EnemySpawner : MonoBehaviour
 
         if (ElapsedTime > spwan_timer && ElapsedTime != 0)
         {
-            Instantiate(Enemys[0],transform.position,Quaternion.identity);
+            RandomXSpawnLocation = Random.Range(-10, 10);
+            RandomYSpawnLoaction = Random.Range(-10, 10);
+
+            randomPosition.x = transform.position.x + RandomXSpawnLocation;
+
+            randomPosition.y = transform.position.y + RandomYSpawnLoaction;
+
+            Instantiate(Enemys[0],randomPosition,Quaternion.identity);
             spwan_timer = GameManager.instance.SpawnTimeRandomiser();
             ElapsedTime = 0f;
         } 

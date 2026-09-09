@@ -500,6 +500,7 @@ MonoBehaviour:
   Stamina: 100
   Stamina_Depleation: 100
   Stamina_Recovery: 20
+  FloatParticle: {fileID: 0}
 --- !u!70 &554342744
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,7 +1,10 @@
+using TMPro;
+using Unity.Hierarchy;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public TextMeshProUGUI TimerText;
     public static GameManager instance { get; private set; }
     
     [SerializeField] GameObject BackGround;
@@ -10,6 +13,9 @@ public class GameManager : MonoBehaviour
     public float LowerSpawnRange = 5f;
 
     public float BackgroundSpawnTimer = 0;
+
+    private float GameTimer = 0;
+    private int GameTimerInt = 0;
     
 
     private void Awake()
@@ -42,17 +48,31 @@ public class GameManager : MonoBehaviour
        return SpawnTime = Random.Range(LowerSpawnRange, HigerSpawnRange);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LevelUpSystem()
+    {
+        
+        GameTimer += Time.deltaTime;
+
+        GameTimerInt = Mathf.RoundToInt(GameTimer);
+        TimerText.text = GameTimerInt.ToString();
+    }
+
+    private void CloudSpawning()
     {
         BackgroundSpawnTimer += Time.deltaTime;
-
         if (BackgroundSpawnTimer > 10)
         {
             RandomSpawn = Random.Range(45, 70);
             Instantiate(BackGround, BackGroundSpawnLocation, Quaternion.identity);
             BackgroundSpawnTimer = 0;
         }
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        LevelUpSystem();
+        
+        CloudSpawning();
     }
 }
