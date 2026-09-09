@@ -3219,6 +3219,10 @@ PrefabInstance:
       value: TEMPwizard_0
       objectReference: {fileID: 0}
     - target: {fileID: 2826575798727134818, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
+      propertyPath: Jump
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826575798727134818, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
       propertyPath: Stamina
       value: 100
       objectReference: {fileID: 0}
@@ -3228,7 +3232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2826575798727134818, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
       propertyPath: Stamina_Recovery
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2826575798727134818, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
       propertyPath: Stamina_Depleation
@@ -3273,6 +3277,26 @@ PrefabInstance:
     - target: {fileID: 3821598984914656368, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491224004540996950, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
+      propertyPath: m_ForceAngle
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491224004540996950, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
+      propertyPath: m_ForceTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491224004540996950, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
+      propertyPath: m_ForceMagnitude
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081419259224431244, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081419259224431244, guid: 16b754ef749e008418a6393df5fd7dba, type: 3}
+      propertyPath: m_Simulated
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

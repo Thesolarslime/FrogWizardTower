@@ -1,9 +1,11 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponDamage : MonoBehaviour
 {
     public PolygonCollider2D DamageArea;
+    public AreaEffector2D Knockback;
     public int Damage;
 
     public ParticleSystem FireParticle;
@@ -28,6 +30,7 @@ public class WeaponDamage : MonoBehaviour
     public void Fire()
     {
         FireParticle.Play();
+        StartCoroutine(TempKnockback());
         foreach (Collider2D Hit in DamageList)
         {
             if (Hit.GetComponent<Health>() != null)
@@ -39,6 +42,21 @@ public class WeaponDamage : MonoBehaviour
                 Hit.GetComponent<Health>().Damage(Damage);
             }
         }
+    }
+
+    public IEnumerator TempKnockback()
+    {
+        Knockback.forceMagnitude = 1000;
+        yield return new WaitForSeconds(0.02f);
+        Knockback.forceMagnitude = 800;
+        yield return new WaitForSeconds(0.02f);
+        Knockback.forceMagnitude = 600;
+        yield return new WaitForSeconds(0.02f);
+        Knockback.forceMagnitude = 400;
+        yield return new WaitForSeconds(0.02f);
+        Knockback.forceMagnitude = 200;
+        yield return new WaitForSeconds(0.02f);
+        Knockback.forceMagnitude = 0;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
