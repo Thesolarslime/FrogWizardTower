@@ -231,9 +231,11 @@ MonoBehaviour:
   TimerText: {fileID: 5870935260458713210}
   BackGround: {fileID: 1288666099951549478, guid: dc8504acf3a8a034185beb50043f188c, type: 3}
   Player: {fileID: 0}
+  LevelUpParicle: {fileID: 6878022176394814702, guid: b33cc8661e406564abc784a1c61a5968, type: 3}
   HigerSpawnRange: 10
   LowerSpawnRange: 5
   BackgroundSpawnTimer: 0
+  LevelUpTime: 30
 --- !u!1 &8385485421293979553
 GameObject:
   m_ObjectHideFlags: 0
