@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private int GameTimerInt = 0;
     private float ElapsedTimeForLevel = 0;
     public float LevelUpTime = 30;
+    public int Level = 0;
     
 
     private void Awake()
