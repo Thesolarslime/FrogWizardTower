@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject BackGround;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject LevelUpParicle;
+    [SerializeField] Animator youWinText;
+    [SerializeField] Animator FadeOut;
     public float HigerSpawnRange = 10f;
     public float LowerSpawnRange = 5f;
 
@@ -59,13 +61,25 @@ public class GameManager : MonoBehaviour
 
     public void LevelUp()
     {
+        Level++;
+        if (Level >= 10)
+        {
+            print("hjds");
+            HigerSpawnRange = 600f;
+            LowerSpawnRange = 500f;
+            youWinText.SetTrigger("HasWon");
+            FadeOut.SetTrigger("FadeOut");
+            return;
+        }
         print("levelUp");
         Instantiate(LevelUpParicle, Player.transform.position, Quaternion.identity);
-        Level++;
+        
         HigerSpawnRange -= 0.5f;
         LowerSpawnRange -= 0.3f;
-        if (HigerSpawnRange < 1.5) { HigerSpawnRange = 1.5f; }
-        if (LowerSpawnRange < 0.5) { HigerSpawnRange = 0.5f; }
+        if (HigerSpawnRange < 1.5) { HigerSpawnRange = 1.5f;}
+        if (LowerSpawnRange < 0.5) { HigerSpawnRange = 0.5f;}
+
+        
 
     }
 
