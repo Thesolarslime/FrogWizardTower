@@ -104,9 +104,6 @@ PrefabInstance:
       addedObject: {fileID: 2069087913928491990}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 0a5128aed6ec9b443b0eb2592a8d589f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8950283719941906791}
-    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 0a5128aed6ec9b443b0eb2592a8d589f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 964289731539514846}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 0a5128aed6ec9b443b0eb2592a8d589f, type: 3}
       insertIndex: -1
@@ -220,7 +217,7 @@ MonoBehaviour:
   Type: Tower
   TileUnlockedAtLevel: 0
   Sprite: {fileID: 3417044879355463347}
-  Shadow: {fileID: 8950283719941906791}
+  Shadow: {fileID: 0}
   Collider: {fileID: 8302210202050784564}
   DeathParticle: {fileID: 4951538066547816164}
   HurtParticle: {fileID: 1470187122084472872}
@@ -241,62 +238,6 @@ MonoBehaviour:
   - {fileID: 8464366243855784232, guid: d343ba0bd90223746aedfe13f3925237, type: 3}
   - {fileID: -7136884541138878316, guid: d343ba0bd90223746aedfe13f3925237, type: 3}
   TileSprite: {fileID: 3417044879355463347}
---- !u!114 &8950283719941906791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9045148183730061631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_Priority: 0
-  m_ComponentVersion: 5
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_AlphaCutoff: 0.1
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.4073778, y: 0.08775306, z: 0}
-  - {x: -0.413888, y: 2.3844566, z: 0}
-  - {x: -0.190662, y: 2.408792, z: 0}
-  - {x: -0.21795487, y: 3.176054, z: 0}
-  - {x: 0.19314647, y: 3.198478, z: 0}
-  - {x: 0.17168713, y: 2.421758, z: 0}
-  - {x: 0.4116243, y: 2.3876843, z: 0}
-  - {x: 0.3976395, y: 0.0812428, z: 0}
-  m_ShapePathHash: -891351329
-  m_InstanceId: 0
-  m_ShadowShape2DComponent: {fileID: 0}
-  m_ShadowShape2DProvider:
-    rid: -2
-  m_ShadowCastingSource: 1
-  m_ShadowMesh:
-    m_Mesh: {fileID: 0}
-    m_LocalBounds:
-      m_Center: {x: -0.0011318624, y: 1.6398604, z: 0}
-      m_Extent: {x: 0.41275615, y: 1.5586176, z: 0}
-    m_EdgeProcessing: 1
-    m_TrimEdge: 0.05
-    m_FlipX: 0
-    m_FlipY: 0
-    m_InitialTrim: 0
-  m_CastingOption: 1
-  m_PreviousTrimEdge: 0.05
-  m_PreviousEdgeProcessing: 1
-  m_PreviousShadowCastingSource: 1
-  m_PreviousShadowShape2DSource: {fileID: 8302210202050784564}
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
 --- !u!114 &964289731539514846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +253,8 @@ MonoBehaviour:
   Audio: {fileID: 1956863936990825790}
   Clips:
   - {fileID: 8300000, guid: ac3ccab33a7543d47814c1ed40cb5c6a, type: 3}
+  - {fileID: 8300000, guid: ac3ccab33a7543d47814c1ed40cb5c6a, type: 3}
+  - {fileID: 8300000, guid: 1013f5f95a4571349811bc84a1e15bb9, type: 3}
 --- !u!82 &1956863936990825790
 AudioSource:
   m_ObjectHideFlags: 0

@@ -85,12 +85,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: ab01f83a17387974f9dfa97b11d83097, type: 3}
       propertyPath: m_Name
-      value: GreyGargoyle
+      value: GreenGargoyle
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ab01f83a17387974f9dfa97b11d83097, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -307223902074169000, guid: 70c1d877db66f6c4d902f3ebf8df23ed, type: 3}
+      objectReference: {fileID: -7495179233819382274, guid: 363b50ee7561efc449bb2b08e6016560, type: 3}
     - target: {fileID: 7878350319992209165, guid: ab01f83a17387974f9dfa97b11d83097, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  Speed: 4
+  Speed: 5
   RotationSpd: 2
 --- !u!50 &7533605208546846705
 Rigidbody2D:
@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cd81601a879d6b408250d1b0853bcec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
-  MaxHP: 1
+  HP: 2
+  MaxHP: 2
   Type: Enemy
   TileUnlockedAtLevel: 0
   Sprite: {fileID: 5918582365961922045}
@@ -306,7 +306,7 @@ Animator:
   m_GameObject: {fileID: 58015881338413681}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ac25fa610bbed26488b4c5d462e52fef, type: 2}
+  m_Controller: {fileID: -7641866654442077402, guid: 363b50ee7561efc449bb2b08e6016560, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -446,7 +446,7 @@ MonoBehaviour:
   Audio: {fileID: 3264390624263845597}
   Clips:
   - {fileID: 8300000, guid: 3a9e4294ffccefa44b46c76f3564b72d, type: 3}
-  - {fileID: 8300000, guid: 6c3feaffec7274844b04630bbadb6375, type: 3}
+  - {fileID: 8300000, guid: 94463b925aa195f4d84a275a422fd70a, type: 3}
   - {fileID: 8300000, guid: ef6e98bb9ae67ef449c6e9c86c79fe79, type: 3}
 --- !u!4 &946855078651120148 stripped
 Transform:

@@ -5007,8 +5007,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 3
+      scalar: 1
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -14841,6 +14841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TouchDamage: 4
   DamageSelf: 1
+  JustTheSound: 0
   Audio: {fileID: 4835949540293635872}
 --- !u!114 &4835949540293635872
 MonoBehaviour:
@@ -14856,6 +14857,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Audio: {fileID: 7994187302162635253}
   Clips:
+  - {fileID: 8300000, guid: 6416a3aa0c92b59479b79e760bb2b69b, type: 3}
+  - {fileID: 8300000, guid: 6416a3aa0c92b59479b79e760bb2b69b, type: 3}
   - {fileID: 8300000, guid: 6416a3aa0c92b59479b79e760bb2b69b, type: 3}
 --- !u!82 &7994187302162635253
 AudioSource:
