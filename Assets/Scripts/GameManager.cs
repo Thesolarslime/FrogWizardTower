@@ -6,20 +6,22 @@ public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI TimerText;
     public static GameManager instance { get; private set; }
-    
+    [Header("Reffrences")]
     [SerializeField] GameObject BackGround;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject LevelUpParicle;
+    [Header("Mobs")]
     public float HigerSpawnRange = 10f;
     public float LowerSpawnRange = 5f;
+    [Header("Game State")]
+    public float LevelUpTime = 30;
+    public float CloudSpawnTimer = 10;
 
-    public float BackgroundSpawnTimer = 0;
 
     private float GameTimer = 0;
     private int GameTimerInt = 0;
     private float ElapsedTimeForLevel = 0;
-    public float LevelUpTime = 30;
-    
+    private float ElapsedTimeForClouds = 0;
 
     private void Awake()
     {
@@ -43,6 +45,7 @@ public class GameManager : MonoBehaviour
         RandomSpawn = Random.Range(50, 70);
 
         BackGroundSpawnLocation = new Vector3(RandomSpawn, 6.4f, 0);
+        Instantiate(BackGround, BackGroundSpawnLocation, Quaternion.identity);
     }
 
     public float SpawnTimeRandomiser()
@@ -70,12 +73,12 @@ public class GameManager : MonoBehaviour
 
     private void CloudSpawning()
     {
-        BackgroundSpawnTimer += Time.deltaTime;
-        if (BackgroundSpawnTimer > 10)
+        ElapsedTimeForClouds += Time.deltaTime;
+        if (ElapsedTimeForClouds > CloudSpawnTimer)
         {
             RandomSpawn = Random.Range(45, 70);
             Instantiate(BackGround, BackGroundSpawnLocation, Quaternion.identity);
-            BackgroundSpawnTimer = 0;
+            ElapsedTimeForClouds = 0;
         }
     }
 
