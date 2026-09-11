@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    // end sequence - spawners stop , you win scrolss down, screens fades to back load scene agian 
+
     public TextMeshProUGUI TimerText;
     public static GameManager instance { get; private set; }
     
@@ -32,7 +35,7 @@ public class GameManager : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+           // DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -58,6 +61,12 @@ public class GameManager : MonoBehaviour
     {
         print("levelUp");
         Instantiate(LevelUpParicle, Player.transform.position, Quaternion.identity);
+        Level++;
+        HigerSpawnRange -= 0.5f;
+        LowerSpawnRange -= 0.3f;
+        if (HigerSpawnRange < 1.5) { HigerSpawnRange = 1.5f; }
+        if (LowerSpawnRange < 0.5) { HigerSpawnRange = 0.5f; }
+
     }
 
     private void LevelUpSystem()

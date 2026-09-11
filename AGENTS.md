@@ -2,7 +2,7 @@
 - Project name: FrogWizardTower
 - Unity version: Unity 6000.0.58f2
 - Active game object:
-  - Name: GameMangerObj
+  - Name: Canvas
   - Tag: Untagged
-  - Layer: Default
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
