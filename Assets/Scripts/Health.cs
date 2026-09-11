@@ -52,6 +52,15 @@ public class Health : MonoBehaviour
             DeathParticle.Play();
             StartCoroutine(EnemyDie());
         }
+        if (Type == "Explosive")
+        {
+            Collider.enabled = false;
+            Sprite.enabled = false;
+            Collider.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+            DeathParticle.Play();
+            gameObject.GetComponent<PointEffector2D>().forceMagnitude = 100;
+            StartCoroutine(EnemyDie());
+        }
     }
 
     private IEnumerator RedPulse()
