@@ -5,6 +5,7 @@ public class DamageOnTouch : MonoBehaviour
 {
     public int TouchDamage = 1;
     public bool DamageSelf;
+    public bool JustTheSound;
     private Health Health;
     public AudioPlayer Audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,7 +22,7 @@ public class DamageOnTouch : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Health>() != null)
+        if (collision.gameObject.GetComponent<Health>() != null && !JustTheSound)
         {
             collision.gameObject.GetComponent<Health>().Damage(TouchDamage);
             if (DamageSelf)
