@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1818ad0d2b816ee46870799101bdc76b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanSpeed: -0.001
-  DestroySelfTime: 100
+  PanSpeed: -1.5
 --- !u!1 &2816081874543629156
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
         RandomSpawn = Random.Range(50, 70);
 
         BackGroundSpawnLocation = new Vector3(RandomSpawn, 6.4f, 0);
+
+        Instantiate(BackGround, BackGroundSpawnLocation, Quaternion.identity);
     }
 
     public float SpawnTimeRandomiser()
