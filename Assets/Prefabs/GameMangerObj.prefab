@@ -1,5 +1,61 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &115589612499155593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023872237451458420}
+  - component: {fileID: 4945760475021270045}
+  m_Layer: 0
+  m_Name: GargoyalSpawner Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023872237451458420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115589612499155593}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -24, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7818492918429438044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4945760475021270045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115589612499155593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a0bc453dd576c4182af8ef2b02aa77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemys:
+  - {fileID: 7140866733638637937, guid: ba60514b7d0cd7f4e83b2866da98b8df, type: 3}
+  - {fileID: 7140866733638637937, guid: ba60514b7d0cd7f4e83b2866da98b8df, type: 3}
+  - {fileID: 58015881338413681, guid: 7b24628095969c24aabb6b12103c8aa4, type: 3}
+  - {fileID: 58015881338413681, guid: 7b24628095969c24aabb6b12103c8aa4, type: 3}
+  - {fileID: 3371499892135538650, guid: 658a05ca9257bf04d91b30bf2867737e, type: 3}
+  - {fileID: 58015881338413681, guid: 7b24628095969c24aabb6b12103c8aa4, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
 --- !u!1 &1498946505648865323
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +204,7 @@ GameObject:
   - component: {fileID: 1811033316479392006}
   - component: {fileID: 2387544990867586840}
   - component: {fileID: 8101657575767394118}
+  - component: {fileID: 7200064769443813852}
   m_Layer: 5
   m_Name: FadeOut
   m_TagString: Untagged
@@ -234,7 +291,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &2697576100335210134
+--- !u!114 &7200064769443813852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264689517229521669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610f0f6089c9f6945b20a3fbbf37f7ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3761872050964038055
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,22 +311,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7040137488160060652}
-  - component: {fileID: 2287500810795830337}
+  - component: {fileID: 6221929617229198668}
+  - component: {fileID: 2206217605250909940}
   m_Layer: 0
-  m_Name: GargoyalSpawner
+  m_Name: GargoyalSpawner Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7040137488160060652
+--- !u!4 &6221929617229198668
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2697576100335210134}
+  m_GameObject: {fileID: 3761872050964038055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 24, y: 0, z: 0}
@@ -266,13 +335,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7818492918429438044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2287500810795830337
+--- !u!114 &2206217605250909940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2697576100335210134}
+  m_GameObject: {fileID: 3761872050964038055}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9a0bc453dd576c4182af8ef2b02aa77, type: 3}
@@ -280,53 +349,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemys:
   - {fileID: 58015881338413681, guid: 7b24628095969c24aabb6b12103c8aa4, type: 3}
---- !u!1 &3971008058598046033
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3079378481169557133}
-  - component: {fileID: 4229930835847881753}
-  m_Layer: 0
-  m_Name: GargoyalSpawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3079378481169557133
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3971008058598046033}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 20, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7818492918429438044}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4229930835847881753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3971008058598046033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9a0bc453dd576c4182af8ef2b02aa77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemys:
   - {fileID: 58015881338413681, guid: 7b24628095969c24aabb6b12103c8aa4, type: 3}
-  - {fileID: 7897817865342663476, guid: fc7f0ef716b9fc84f9ad27334e588e79, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 3371499892135538650, guid: 658a05ca9257bf04d91b30bf2867737e, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 3371499892135538650, guid: 658a05ca9257bf04d91b30bf2867737e, type: 3}
+  - {fileID: 3371499892135538650, guid: 658a05ca9257bf04d91b30bf2867737e, type: 3}
+  - {fileID: 58015881338413681, guid: c0fdd39f6057b604da32eb1ad7e695c0, type: 3}
+  - {fileID: 3371499892135538650, guid: 658a05ca9257bf04d91b30bf2867737e, type: 3}
 --- !u!1 &4575370164706695416
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +370,7 @@ GameObject:
   - component: {fileID: 100616558547172153}
   - component: {fileID: 6834435191455468835}
   - component: {fileID: 711476224582937066}
-  - component: {fileID: 6083174506122473845}
+  - component: {fileID: 8797330832442204707}
   m_Layer: 5
   m_Name: YouWINText
   m_TagString: Untagged
@@ -464,7 +496,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!95 &6083174506122473845
+--- !u!95 &8797330832442204707
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -516,8 +548,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7040137488160060652}
-  - {fileID: 3079378481169557133}
+  - {fileID: 5696124776818039688}
+  - {fileID: 6221929617229198668}
+  - {fileID: 1023872237451458420}
   - {fileID: 6603986734429924745}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -537,13 +570,167 @@ MonoBehaviour:
   BackGround: {fileID: 1288666099951549478, guid: dc8504acf3a8a034185beb50043f188c, type: 3}
   Player: {fileID: 0}
   LevelUpParicle: {fileID: 6878022176394814702, guid: b33cc8661e406564abc784a1c61a5968, type: 3}
-  youWinText: {fileID: 6083174506122473845}
+  youWinText: {fileID: 8797330832442204707}
   FadeOut: {fileID: 8101657575767394118}
   HigerSpawnRange: 10
   LowerSpawnRange: 5
   BackgroundSpawnTimer: 0
   LevelUpTime: 30
   Level: 0
+--- !u!1 &5478578029717570457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5396232085708290756}
+  - component: {fileID: 2363821785502182248}
+  - component: {fileID: 2143605794609263733}
+  - component: {fileID: 3026028836022667213}
+  m_Layer: 5
+  m_Name: FadeIn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5396232085708290756
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478578029717570457}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6603986734429924745}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 81.4639, y: -6.7886}
+  m_SizeDelta: {x: 1822.3811, y: 1238.5559}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2363821785502182248
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478578029717570457}
+  m_CullTransparentMesh: 1
+--- !u!114 &2143605794609263733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478578029717570457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!95 &3026028836022667213
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478578029717570457}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a8b6775a91bf864298d55dcf962a798, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &5895979709228777453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5696124776818039688}
+  - component: {fileID: 6543328787005213950}
+  m_Layer: 0
+  m_Name: GargoyalSpawner Up
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5696124776818039688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5895979709228777453}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 20, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7818492918429438044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6543328787005213950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5895979709228777453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a0bc453dd576c4182af8ef2b02aa77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemys:
+  - {fileID: 7140866733638637937, guid: ba60514b7d0cd7f4e83b2866da98b8df, type: 3}
+  - {fileID: 7897817865342663476, guid: fc7f0ef716b9fc84f9ad27334e588e79, type: 3}
+  - {fileID: 9045148183730061631, guid: 94c40324b5cfcce4e8f911aaa7a935d4, type: 3}
+  - {fileID: 58015881338413681, guid: 7b24628095969c24aabb6b12103c8aa4, type: 3}
+  - {fileID: 7897817865342663476, guid: fc7f0ef716b9fc84f9ad27334e588e79, type: 3}
+  - {fileID: 7897817865342663476, guid: 11b2ba413ba52f2469a0cce4e4fe1ea8, type: 3}
+  - {fileID: 7897817865342663476, guid: 11b2ba413ba52f2469a0cce4e4fe1ea8, type: 3}
+  - {fileID: 7897817865342663476, guid: fc7f0ef716b9fc84f9ad27334e588e79, type: 3}
+  - {fileID: 7897817865342663476, guid: fc7f0ef716b9fc84f9ad27334e588e79, type: 3}
+  - {fileID: 7897817865342663476, guid: fc7f0ef716b9fc84f9ad27334e588e79, type: 3}
+  - {fileID: 7897817865342663476, guid: fc7f0ef716b9fc84f9ad27334e588e79, type: 3}
 --- !u!1 &8385485421293979553
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,8 +763,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5808523770691700043}
-  - {fileID: 100616558547172153}
   - {fileID: 8345846038198099478}
+  - {fileID: 5396232085708290756}
+  - {fileID: 100616558547172153}
   m_Father: {fileID: 7818492918429438044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
