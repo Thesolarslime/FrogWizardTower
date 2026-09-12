@@ -7,7 +7,7 @@ public class WeaponDamage : MonoBehaviour
     public PolygonCollider2D DamageArea;
     public AreaEffector2D Knockback;
     public int Damage;
-
+    public float coolDown = 0.5f;
     public ParticleSystem FireParticle;
 
     public List<Collider2D> DamageList = new List<Collider2D> ();
@@ -18,12 +18,15 @@ public class WeaponDamage : MonoBehaviour
         
     }
 
+    float elapsedTime = 0f;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        elapsedTime += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Mouse0) && elapsedTime > coolDown)
         {
             Fire();
+            elapsedTime = 0f;
         }
     }
 
