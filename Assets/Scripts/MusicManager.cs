@@ -44,9 +44,9 @@ public class MusicManager : MonoBehaviour
                     CameraStarryAnimator.SetBool("Starry", true);
                     break;
                 case 2:
-                    CameraStarryAnimator.SetBool("Starry", true);
+                    CameraStarryAnimator.SetBool("Starry", false);
                     WindParticles.Play();
-                    WindEffector.forceMagnitude = 10;
+                    WindEffector.forceMagnitude = 8;
                     break;
                 case 3:
                     WindParticles.Stop();

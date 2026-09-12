@@ -220,7 +220,7 @@ MonoBehaviour:
   Type: Tower
   TileUnlockedAtLevel: 0
   Sprite: {fileID: 3417044879355463347}
-  Shadow: {fileID: 0}
+  Shadow: {fileID: 1564547692399786338}
   Collider: {fileID: 8302210202050784564}
   DeathParticle: {fileID: 4951538066547816164}
   HurtParticle: {fileID: 1470187122084472872}
@@ -412,7 +412,7 @@ MonoBehaviour:
     m_TrimEdge: 0.08
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.08
+    m_InitialTrim: 0
   m_CastingOption: 3
   m_PreviousTrimEdge: 0.08
   m_PreviousEdgeProcessing: 1

@@ -10,7 +10,7 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] float Jump = 10.0f;
     [SerializeField] float RotationSpd = 30;
     [SerializeField] float FloatSpd = 4;
-    public float Stamina = 100;
+    public float Stamina = 50;
     [SerializeField] float Stamina_Depleation = 0.1f;
     [SerializeField] float Stamina_Recovery = 0.1f;
     public float Max_stamina;
