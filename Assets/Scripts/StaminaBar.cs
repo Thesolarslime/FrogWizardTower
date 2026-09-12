@@ -13,6 +13,6 @@ public class StaminaBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BarSprite.size = new Vector2(PlayerMove.Stamina / 8f, 0.3f);
+        BarSprite.size = new Vector2(PlayerMove.Stamina / 15f, 0.3f);
     }
 }

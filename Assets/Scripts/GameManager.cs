@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     private float GameTimer = 0;
     private int GameTimerInt = 0;
     private float ElapsedTimeForLevel = 0;
-    public float LevelUpTime = 30;
+    public float LevelUpTime = 60;
     public int Level = 0;
     
 

@@ -139,7 +139,7 @@ MonoBehaviour:
   Jump: 80
   RotationSpd: 300
   FloatSpd: 5
-  Stamina: 80
+  Stamina: 50
   Stamina_Depleation: 100
   Stamina_Recovery: 30
   Max_stamina: 0
