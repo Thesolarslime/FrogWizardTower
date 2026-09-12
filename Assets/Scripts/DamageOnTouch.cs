@@ -1,11 +1,13 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamageOnTouch : MonoBehaviour
 {
     public int TouchDamage = 1;
     public bool DamageSelf;
     public bool JustTheSound;
+    public bool DeathPit = false;
     private Health Health;
     public AudioPlayer Audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,6 +32,10 @@ public class DamageOnTouch : MonoBehaviour
                 Health.Damage(TouchDamage);
             }
         }
-        Audio.PlaySound(0, 0.5f, true);
+        if (collision.gameObject.GetComponent<PlayerMovment>() != null && DeathPit)
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+        Audio.PlaySound(0, 0.25f, true);
     }
 }

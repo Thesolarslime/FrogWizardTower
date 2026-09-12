@@ -6,6 +6,7 @@ public class MoveTowrdsPlayer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject Player;
     Rigidbody2D RB;
+    SpriteRenderer Sprite;
     [SerializeField] float Speed = 4;
     [SerializeField] float RotationSpd = 2;
     float ElapsedTime = 0;
@@ -15,6 +16,7 @@ public class MoveTowrdsPlayer : MonoBehaviour
     {
         Player = FindAnyObjectByType<PlayerMovment>().gameObject;
         RB = GetComponent<Rigidbody2D>();
+        Sprite = GetComponent<SpriteRenderer>();
     }
 
 
@@ -37,6 +39,15 @@ public class MoveTowrdsPlayer : MonoBehaviour
 
         //RB.MovePosition(MoveToVector);
         RB.AddForce(ToPlayer);
+
+        if (RB.linearVelocityX > 1)
+        {
+            Sprite.flipX = true;
+        }
+        if (RB.linearVelocityX < -1)
+        {
+            Sprite.flipX = false;
+        }
 
         if (RB.linearVelocityX > 5)
         {

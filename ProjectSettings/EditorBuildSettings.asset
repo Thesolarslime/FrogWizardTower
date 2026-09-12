@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TobyTest.unity
     guid: 2de8ab468fd99164c93ce0d34ba7fbf9
+  - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: 8e36f41876a224f40b77c2d741c81962
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
