@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject LevelUpParicle;
     [SerializeField] Animator youWinText;
     [SerializeField] Animator FadeOut;
+    private AudioSource SoundPlayer;
+    [SerializeField] AudioClip LevelUpSound;
+    [Header("-----------------------------------------------------------")]
+    
     public float HigerSpawnRange = 10f;
     public float LowerSpawnRange = 5f;
 
@@ -46,6 +50,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SoundPlayer = GetComponent<AudioSource>();
         RandomSpawn = Random.Range(50, 70);
 
         BackGroundSpawnLocation = new Vector3(RandomSpawn, 6.4f, 0);
@@ -61,10 +66,13 @@ public class GameManager : MonoBehaviour
 
     public void LevelUp()
     {
+        SoundPlayer.clip = LevelUpSound;
+        SoundPlayer.Play();
         Level++;
         if (Level >= 10)
         {
-            print("hjds");
+           
+            
             HigerSpawnRange = 600f;
             LowerSpawnRange = 500f;
             youWinText.SetTrigger("HasWon");
