@@ -447,7 +447,7 @@ MonoBehaviour:
   Clips:
   - {fileID: 8300000, guid: 3a9e4294ffccefa44b46c76f3564b72d, type: 3}
   - {fileID: 8300000, guid: 6c3feaffec7274844b04630bbadb6375, type: 3}
-  - {fileID: 8300000, guid: ef6e98bb9ae67ef449c6e9c86c79fe79, type: 3}
+  - {fileID: 8300000, guid: 94463b925aa195f4d84a275a422fd70a, type: 3}
 --- !u!4 &946855078651120148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: ab01f83a17387974f9dfa97b11d83097, type: 3}

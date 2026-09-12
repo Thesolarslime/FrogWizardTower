@@ -9,13 +9,14 @@ public class WeaponDamage : MonoBehaviour
     public int Damage;
     public float coolDown = 0.5f;
     public ParticleSystem FireParticle;
+    private AudioPlayer Audio;
 
     public List<Collider2D> DamageList = new List<Collider2D> ();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Audio = GetComponent<AudioPlayer>();
     }
 
     float elapsedTime = 0f;
@@ -33,6 +34,7 @@ public class WeaponDamage : MonoBehaviour
     public void Fire()
     {
         FireParticle.Play();
+        Audio.PlaySound(Random.Range(0,4), 0.15f, true);
         StartCoroutine(TempKnockback());
         foreach (Collider2D Hit in DamageList)
         {
