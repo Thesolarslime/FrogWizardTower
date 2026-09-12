@@ -6,14 +6,14 @@ public class PlayerMovment : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
     private float ElapsedTime = 0;  
-    [SerializeField] float Speed = 1.0f;
+    public float Speed = 1.0f;
     [SerializeField] float Jump = 10.0f;
     [SerializeField] float RotationSpd = 30;
     [SerializeField] float FloatSpd = 4;
     public float Stamina = 100;
     [SerializeField] float Stamina_Depleation = 0.1f;
     [SerializeField] float Stamina_Recovery = 0.1f;
-    float Max_stamina;
+    public float Max_stamina;
 
     private Animator WizardAnimator;
     [SerializeField] ParticleSystem FloatParticle;

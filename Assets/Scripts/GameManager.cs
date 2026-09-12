@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     Vector3 BackGroundSpawnLocation;
     int RandomSpawn;
+    PlayerMovment playerStats;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,6 +57,8 @@ public class GameManager : MonoBehaviour
         BackGroundSpawnLocation = new Vector3(RandomSpawn, 6.4f, 0);
 
         Instantiate(BackGround, BackGroundSpawnLocation, Quaternion.identity);
+
+        playerStats = Player.GetComponent<PlayerMovment>();
     }
 
     public float SpawnTimeRandomiser()
@@ -81,7 +84,10 @@ public class GameManager : MonoBehaviour
         }
         print("levelUp");
         Instantiate(LevelUpParicle, Player.transform.position, Quaternion.identity);
-        
+
+        playerStats.Max_stamina += 10;
+        playerStats.Speed += 0.2f;
+
         HigerSpawnRange -= 0.5f;
         LowerSpawnRange -= 0.3f;
         if (HigerSpawnRange < 1.5) { HigerSpawnRange = 1.5f;}
