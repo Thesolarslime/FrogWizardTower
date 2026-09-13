@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -38,6 +39,16 @@ public class Health : MonoBehaviour
             HurtParticle.Play();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+    }
+
+  
 
     public IEnumerator Die()
     {

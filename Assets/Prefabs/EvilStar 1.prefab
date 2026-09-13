@@ -9737,6 +9737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EvilStar 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: ccb34cd121837b3469608d11eb074f9f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: ccb34cd121837b3469608d11eb074f9f, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -14814,6 +14818,7 @@ MonoBehaviour:
   TouchDamage: 4
   DamageSelf: 1
   JustTheSound: 0
+  DeathPit: 0
   Audio: {fileID: 4835949540293635872}
 --- !u!114 &4835949540293635872
 MonoBehaviour:

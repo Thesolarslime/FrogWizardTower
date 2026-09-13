@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallingTile
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 0a5128aed6ec9b443b0eb2592a8d589f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 0a5128aed6ec9b443b0eb2592a8d589f, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -370,6 +374,7 @@ MonoBehaviour:
   TouchDamage: 0
   DamageSelf: 0
   JustTheSound: 1
+  DeathPit: 0
   Audio: {fileID: 964289731539514846}
 --- !u!114 &1564547692399786338
 MonoBehaviour:
