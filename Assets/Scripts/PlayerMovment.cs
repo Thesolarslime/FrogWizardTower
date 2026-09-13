@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 public class PlayerMovment : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -71,7 +73,15 @@ public class PlayerMovment : MonoBehaviour
         }
             
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            print("Been hit by enemy");
 
+            SceneManager.LoadScene("LoseScene");
+        }
+    }
 
     private void FixedUpdate()
     {
