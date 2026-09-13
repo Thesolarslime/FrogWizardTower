@@ -11,7 +11,18 @@ public class LoopGame : MonoBehaviour
 
     public void loopScene()
     {
-        SceneManager.LoadScene("TobyTest");
+        if (SceneManager.GetActiveScene().name == "TobyTest")
+        {
+            SceneManager.LoadScene("TobyTest");
+        }
+        if (SceneManager.GetActiveScene().name == "Cutscene")
+        {
+            SceneManager.LoadScene("Cutscene2");
+        }
+        if (SceneManager.GetActiveScene().name == "Cutscene2")
+        {
+            SceneManager.LoadScene("TobyTest");
+        }
     }
 
    
