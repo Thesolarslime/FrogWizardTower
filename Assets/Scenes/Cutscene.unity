@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\r\n\r\nLike them, all wizards may use celebration spells on their birthday.\r\n\r\n "
+  m_text: "\r\n\r\nOf course, All wizards may use celebration spells on their birthday.\r\n\r\n "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d21e367fb4e39fe4192b77a35c0ada78, type: 2}
   m_sharedMaterial: {fileID: 1857901936343120690, guid: d21e367fb4e39fe4192b77a35c0ada78, type: 2}
@@ -947,7 +947,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -3164809056393425246, guid: 7e4b11b3535a19c47b16257ab3d1ba71, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
